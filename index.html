@@ -71,28 +71,64 @@
                 <!-- Featured Project Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
                     <div class="col-xl-8 col-lg-7">
-                        <!-- YouTube Video Embed -->
-                        <div class="ratio ratio-16x9 mb-3 mb-lg-0">
-                            <iframe src="https://www.youtube.com/embed/Bhh_11p-yRw" 
-                                    title="Project Demo" 
-                                    allowfullscreen
-                                    loading="lazy">
-                            </iframe>
+                        <!-- Image/Video Container with Hover Effect -->
+                        <div class="position-relative mb-3 mb-lg-0" style="cursor: pointer;" id="videoContainer">
+                            <!-- Banner Image (Default) -->
+                            <img class="img-fluid" 
+                                 src="assets/img/GrowAFusionBanner.webp" 
+                                 alt="Grow a Fusion Banner" 
+                                 id="bannerImage">
+                            
+                            <!-- YouTube Video (Hidden by default) -->
+                            <div class="ratio ratio-16x9" id="videoFrame" style="display: none;">
+                                <iframe src="https://www.youtube.com/embed/Bhh_11p-yRw?autoplay=1" 
+                                        title="Grow a Fusion Demo" 
+                                        allowfullscreen
+                                        allow="autoplay">
+                                </iframe>
+                            </div>
+                            
+                            <!-- Play Button Overlay -->
+                            <div id="playButton" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none;">
+                                <i class="fas fa-play-circle" style="font-size: 4rem; color: rgba(255,255,255,0.9); text-shadow: 0 0 20px rgba(0,0,0,0.5);"></i>
+                            </div>
                         </div>
+                        
+                        <script>
+                            const container = document.getElementById('videoContainer');
+                            const bannerImg = document.getElementById('bannerImage');
+                            const videoFrame = document.getElementById('videoFrame');
+                            const playBtn = document.getElementById('playButton');
+                            
+                            container.addEventListener('mouseenter', function() {
+                                bannerImg.style.display = 'none';
+                                playBtn.style.display = 'none';
+                                videoFrame.style.display = 'block';
+                            });
+                            
+                            container.addEventListener('mouseleave', function() {
+                                videoFrame.style.display = 'none';
+                                bannerImg.style.display = 'block';
+                                playBtn.style.display = 'block';
+                                // Reset video by changing src
+                                const iframe = videoFrame.querySelector('iframe');
+                                const currentSrc = iframe.src;
+                                iframe.src = currentSrc.replace('autoplay=1', 'autoplay=0');
+                            });
+                        </script>
                     </div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
-                            <!-- ✏️ EDIT: Add Roblox Project #1 name -->
-                            <h4>[Game/System Name #1]</h4>
+                            <h4>Grow a Fusion</h4>
                             <p class="text-black-50 mb-0">
-                                <!-- ✏️ EDIT: Describe the project, e.g., -->
-                                [This project involved developing an (Inventory System/Combat System/Shop System) for the game (Game Name). 
-                                Built with Lua Script for both Client-side and Server-side, featuring DataStore integration for player data persistence. 
-                                Supports XXX+ concurrent players.]
+                                An engaging Roblox game featuring fusion mechanics and seasonal content. 
+                                Built with optimized Lua scripts for smooth gameplay experience. 
+                                Includes custom UI systems and player progression tracking.
                             </p>
                             <div class="mt-3">
-                                <!-- ✏️ EDIT: Add Roblox game link or additional info -->
-                                <a href="#!" class="btn btn-sm btn-primary me-2">View Game</a>
+                                <a href="https://www.roblox.com/games/115410710736260/Grow-a-Fusion-SEASON01" 
+                                   class="btn btn-sm btn-primary me-2" 
+                                   target="_blank">View Game</a>
                                 <a href="#!" class="btn btn-sm btn-outline-primary">Learn More</a>
                             </div>
                         </div>
