@@ -139,22 +139,68 @@
                 <!-- Project One Row-->
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
                     <div class="col-lg-6">
-                        <!-- 🖼️ or 🎥 EDIT: Add image or video for Project #2 -->
-                        <img class="img-fluid" src="assets/img/demo-image-01.jpg" alt=" Project 2" />
+                        <!-- Image/Video Container with Hover Effect -->
+                        <div class="position-relative mb-3 mb-lg-0" style="cursor: pointer;" id="videoContainer2">
+                            <!-- Banner Image (Default) -->
+                            <img class="img-fluid" 
+                                 src="assets/img/SummerBanner.webp" 
+                                 alt="ฤดูร้อน Banner" 
+                                 id="bannerImage2">
+                            
+                            <!-- YouTube Video (Hidden by default) -->
+                            <div class="ratio ratio-16x9" id="videoFrame2" style="display: none;">
+                                <iframe src="https://www.youtube.com/embed/Bhh_11p-yRw?autoplay=1" 
+                                        title="ฤดูร้อน Demo" 
+                                        allowfullscreen
+                                        allow="autoplay">
+                                </iframe>
+                            </div>
+                            
+                            <!-- Play Button Overlay -->
+                            <div id="playButton2" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none;">
+                                <i class="fas fa-play-circle" style="font-size: 4rem; color: rgba(255,255,255,0.9); text-shadow: 0 0 20px rgba(0,0,0,0.5);"></i>
+                            </div>
+                        </div>
+                        
+                        <script>
+                            const container2 = document.getElementById('videoContainer2');
+                            const bannerImg2 = document.getElementById('bannerImage2');
+                            const videoFrame2 = document.getElementById('videoFrame2');
+                            const playBtn2 = document.getElementById('playButton2');
+                            
+                            container2.addEventListener('mouseenter', function() {
+                                bannerImg2.style.display = 'none';
+                                playBtn2.style.display = 'none';
+                                videoFrame2.style.display = 'block';
+                            });
+                            
+                            container2.addEventListener('mouseleave', function() {
+                                videoFrame2.style.display = 'none';
+                                bannerImg2.style.display = 'block';
+                                playBtn2.style.display = 'block';
+                                // Reset video by changing src
+                                const iframe2 = videoFrame2.querySelector('iframe');
+                                const currentSrc2 = iframe2.src;
+                                iframe2.src = currentSrc2.replace('autoplay=1', 'autoplay=0');
+                            });
+                        </script>
                     </div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <!-- ✏️ EDIT: Project #2 name -->
-                                    <h4 class="text-white">[Game/System Name #2]</h4>
+                                    <h4 class="text-white">ฤดูร้อน (Summer Season)</h4>
                                     <p class="mb-0 text-white-50">
-                                        <!-- ✏️ EDIT: Project details -->
-                                        [A (Pet System/Quest System/Mini-game) developed using Object-Oriented Programming principles. 
-                                        Utilizes ModuleScript for clean, organized code structure. Easily expandable and updatable for future features.]
+                                        A Thai-themed social hangout experience featuring voice chat capabilities and cultural festivals.  
+                                        Developed with interactive systems including sitting, dancing, and player carrying mechanics.  
+                                        Integrated fishing gameplay and karaoke entertainment features.  
+                                        Supports VR platform with optimized performance.  
+                                        Provides free private servers for enhanced community engagement.
                                     </p>
                                     <div class="mt-3">
-                                        <!-- ✏️ EDIT: Add relevant links -->
+                                        <a href="https://www.roblox.com/games/109289548069828/unnamed" 
+                                           class="btn btn-sm btn-outline-light me-2" 
+                                           target="_blank">View Game</a>
                                         <a href="#!" class="btn btn-sm btn-outline-light">Learn More</a>
                                     </div>
                                 </div>
