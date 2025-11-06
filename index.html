@@ -7,16 +7,12 @@
         <meta name="author" content="Hex - Khunawut Duangwinyan" />
         <title>Hex - Portfolio | Roblox Scripter</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
-        <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="#page-top">Hex</a>
@@ -33,7 +29,6 @@
                 </div>
             </div>
         </nav>
-        <!-- Masthead-->
         <header class="masthead">
             <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
                 <div class="d-flex justify-content-center">
@@ -45,7 +40,6 @@
                 </div>
             </div>
         </header>
-        <!-- About-->
         <section class="about-section text-center" id="about">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -58,59 +52,37 @@
                         </p>
                     </div>
                 </div>
-                <!-- 🖼️ EDIT: Change src to your profile picture, e.g., assets/img/hex-profile.jpg -->
                 <img class="img-fluid" src="assets/img/ipad.png" alt="Hex Profile" style="max-width: 500px; border-radius: 10px;" />
             </div>
         </section>
-        <!-- Projects-->
         <section class="projects-section bg-light" id="projects">
             <div class="container px-4 px-lg-5">
                 <h2 class="text-center mb-5">My Projects</h2>
-                
-                <!-- Featured Project Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
                     <div class="col-xl-8 col-lg-7">
-                        <!-- Image/Video Container with Hover Effect -->
                         <div class="position-relative mb-3 mb-lg-0" style="cursor: pointer;" id="videoContainer">
-                            <!-- Banner Image (Default) -->
-                            <img class="img-fluid" 
-                                 src="assets/img/GrowAFusionBanner.webp" 
-                                 alt="Grow a Fusion Banner" 
-                                 id="bannerImage"
-                                 style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-                            
-                            <!-- YouTube Video (Hidden by default) -->
+                            <img class="img-fluid" src="assets/img/GrowAFusionBanner.webp" alt="Grow a Fusion Banner" id="bannerImage" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
                             <div class="ratio ratio-16x9" id="videoFrame" style="display: none;">
-                                <iframe src="https://www.youtube.com/embed/Bhh_11p-yRw?autoplay=1" 
-                                        title="Grow a Fusion Demo" 
-                                        allowfullscreen
-                                        allow="autoplay">
-                                </iframe>
+                                <iframe src="https://www.youtube.com/embed/Bhh_11p-yRw?autoplay=1" title="Grow a Fusion Demo" allowfullscreen allow="autoplay"></iframe>
                             </div>
-                            
-                            <!-- Play Button Overlay -->
                             <div id="playButton" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none;">
                                 <i class="fas fa-play-circle" style="font-size: 4rem; color: rgba(255,255,255,0.9); text-shadow: 0 0 20px rgba(0,0,0,0.5);"></i>
                             </div>
                         </div>
-                        
                         <script>
                             const container = document.getElementById('videoContainer');
                             const bannerImg = document.getElementById('bannerImage');
                             const videoFrame = document.getElementById('videoFrame');
                             const playBtn = document.getElementById('playButton');
-                            
                             container.addEventListener('mouseenter', function() {
                                 bannerImg.style.display = 'none';
                                 playBtn.style.display = 'none';
                                 videoFrame.style.display = 'block';
                             });
-                            
                             container.addEventListener('mouseleave', function() {
                                 videoFrame.style.display = 'none';
                                 bannerImg.style.display = 'block';
                                 playBtn.style.display = 'block';
-                                // Reset video by changing src
                                 const iframe = videoFrame.querySelector('iframe');
                                 const currentSrc = iframe.src;
                                 iframe.src = currentSrc.replace('autoplay=1', 'autoplay=0');
@@ -121,66 +93,40 @@
                         <div class="featured-text text-center text-lg-left">
                             <h4>Grow a Fusion</h4>
                             <p class="text-black-50 mb-0">
-                                A unique Roblox farming game with fusion-based plant mechanics.  
-                                Features seasonal updates and evolving content.  
-                                Optimized Lua scripting ensures smooth, responsive gameplay.  
-                                Includes custom UI systems tailored for player interaction.  
-                                Tracks player progression with persistent data saving.
+                                A unique Roblox farming game with fusion-based plant mechanics. Features seasonal updates and evolving content. Optimized Lua scripting ensures smooth, responsive gameplay. Includes custom UI systems tailored for player interaction. Tracks player progression with persistent data saving.
                             </p>
                             <div class="mt-3">
-                                <a href="https://www.roblox.com/games/115410710736260/Grow-a-Fusion-SEASON01" 
-                                   class="btn btn-sm btn-primary me-2" 
-                                   target="_blank">View Game</a>
+                                <a href="https://www.roblox.com/games/115410710736260/Grow-a-Fusion-SEASON01" class="btn btn-sm btn-primary me-2" target="_blank">View Game</a>
                                 <a href="#!" class="btn btn-sm btn-outline-primary">Learn More</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Project One Row-->
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
                     <div class="col-lg-6">
-                        <!-- Image/Video Container with Hover Effect -->
                         <div class="position-relative mb-3 mb-lg-0 d-flex align-items-center justify-content-center" style="cursor: pointer; background-color: #000; min-height: 100%;" id="videoContainer2">
-                            <!-- Banner Image (Default) -->
-                            <img class="img-fluid" 
-                                 src="assets/img/SummerBanner.webp" 
-                                 alt="ฤดูร้อน Banner" 
-                                 id="bannerImage2"
-                                 style="max-width: 100%; height: auto; display: block;">
-                            
-                            <!-- YouTube Video (Hidden by default) -->
+                            <img class="img-fluid" src="assets/img/SummerBanner.webp" alt="ฤดูร้อน Banner" id="bannerImage2" style="max-width: 100%; height: auto; display: block;">
                             <div class="ratio ratio-16x9" id="videoFrame2" style="display: none;">
-                                <iframe src="https://www.youtube.com/embed/Bhh_11p-yRw?autoplay=1" 
-                                        title="ฤดูร้อน Demo" 
-                                        allowfullscreen
-                                        allow="autoplay">
-                                </iframe>
+                                <iframe src="https://www.youtube.com/embed/Bhh_11p-yRw?autoplay=1" title="ฤดูร้อน Demo" allowfullscreen allow="autoplay"></iframe>
                             </div>
-                            
-                            <!-- Play Button Overlay -->
                             <div id="playButton2" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none;">
                                 <i class="fas fa-play-circle" style="font-size: 4rem; color: rgba(255,255,255,0.9); text-shadow: 0 0 20px rgba(0,0,0,0.5);"></i>
                             </div>
                         </div>
-                        
                         <script>
                             const container2 = document.getElementById('videoContainer2');
                             const bannerImg2 = document.getElementById('bannerImage2');
                             const videoFrame2 = document.getElementById('videoFrame2');
                             const playBtn2 = document.getElementById('playButton2');
-                            
                             container2.addEventListener('mouseenter', function() {
                                 bannerImg2.style.display = 'none';
                                 playBtn2.style.display = 'none';
                                 videoFrame2.style.display = 'block';
                             });
-                            
                             container2.addEventListener('mouseleave', function() {
                                 videoFrame2.style.display = 'none';
                                 bannerImg2.style.display = 'block';
                                 playBtn2.style.display = 'block';
-                                // Reset video by changing src
                                 const iframe2 = videoFrame2.querySelector('iframe');
                                 const currentSrc2 = iframe2.src;
                                 iframe2.src = currentSrc2.replace('autoplay=1', 'autoplay=0');
@@ -193,16 +139,10 @@
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
                                     <h4 class="text-white">ฤดูร้อน (Summer Season)</h4>
                                     <p class="mb-0 text-white-50">
-                                        A Thai-themed social hangout experience featuring voice chat capabilities and cultural festivals.  
-                                        Developed with interactive systems including sitting, dancing, and player carrying mechanics.  
-                                        Integrated fishing gameplay and karaoke entertainment features.  
-                                        Supports VR platform with optimized performance.  
-                                        Provides free private servers for enhanced community engagement.
+                                        A Thai-themed social hangout experience featuring voice chat capabilities and cultural festivals. Developed with interactive systems including sitting, dancing, and player carrying mechanics. Integrated fishing gameplay and karaoke entertainment features. Supports VR platform with optimized performance. Provides free private servers for enhanced community engagement.
                                     </p>
                                     <div class="mt-3">
-                                        <a href="https://www.roblox.com/games/109289548069828/unnamed" 
-                                           class="btn btn-sm btn-outline-light me-2" 
-                                           target="_blank">View Game</a>
+                                        <a href="https://www.roblox.com/games/109289548069828/unnamed" class="btn btn-sm btn-outline-light me-2" target="_blank">View Game</a>
                                         <a href="#!" class="btn btn-sm btn-outline-light">Learn More</a>
                                     </div>
                                 </div>
@@ -210,124 +150,89 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Project Gallery Section -->
                 <div class="mt-5 pt-5">
                     <h3 class="text-center mb-4">More Projects</h3>
-                    
-                    <!-- Category Filter -->
                     <div class="text-center mb-4">
                         <button class="btn btn-sm btn-outline-primary mx-1 category-btn active" data-category="all">All</button>
-                        <button class="btn btn-sm btn-outline-primary mx-1 category-btn" data-category="fighting">Fighting</button>
-                        <button class="btn btn-sm btn-outline-primary mx-1 category-btn" data-category="gui">GUI</button>
-                        <button class="btn btn-sm btn-outline-primary mx-1 category-btn" data-category="misc">Misc</button>
+                        <button class="btn btn-sm btn-outline-primary mx-1 category-btn" data-category="frontend">Frontend</button>
+                        <button class="btn btn-sm btn-outline-primary mx-1 category-btn" data-category="backend">Backend</button>
+                        <button class="btn btn-sm btn-outline-primary mx-1 category-btn" data-category="fullstack">Fullstack</button>
                     </div>
-                    
-                    <!-- Scrollable Gallery -->
                     <div class="position-relative">
                         <div class="gallery-container" style="overflow-x: auto; overflow-y: hidden; white-space: nowrap; padding: 20px 0; scroll-behavior: smooth;">
                             <div class="gallery-inner" style="display: inline-flex; gap: 20px;">
-                                
-                                <!-- Gallery Item 1 -->
-                                <div class="gallery-item" data-category="fighting" style="display: inline-block; width: 350px; vertical-align: top;">
+                                <div class="gallery-item" data-category="frontend" style="display: inline-block; width: 350px; vertical-align: top;">
                                     <div class="card h-100">
-                                        <img src="assets/img/demo-image-01.jpg" class="card-img-top" alt="Combat System" style="height: 200px; object-fit: cover;">
+                                        <img src="assets/img/demo-image-01.jpg" class="card-img-top" alt="Modern UI Design" style="height: 200px; object-fit: cover;">
                                         <div class="card-body">
-                                            <h5 class="card-title">Combat System</h5>
-                                            <p class="card-text text-muted small">Advanced melee and ranged combat system with combo mechanics, hitboxes, and damage calculation. Includes dodge and parry systems.</p>
-                                            <a href="#!" class="btn btn-sm btn-primary">View</a>
+                                            <h5 class="card-title">Modern UI Design</h5>
+                                            <p class="card-text text-muted small">Responsive interface with smooth animations and interactive elements. Built with modern CSS frameworks.</p>
+                                            <button class="btn btn-sm btn-primary view-project-btn" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ" data-title="Modern UI Design" data-description="This project showcases a fully responsive user interface with smooth transitions and modern design principles. Features include: custom animations, mobile-first approach, accessible components, and optimized performance.">View</button>
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <!-- Gallery Item 2 -->
-                                <div class="gallery-item" data-category="gui" style="display: inline-block; width: 350px; vertical-align: top;">
+                                <div class="gallery-item" data-category="backend" style="display: inline-block; width: 350px; vertical-align: top;">
                                     <div class="card h-100">
-                                        <img src="assets/img/demo-image-02.jpg" class="card-img-top" alt="Inventory System" style="height: 200px; object-fit: cover;">
+                                        <img src="assets/img/demo-image-02.jpg" class="card-img-top" alt="API System" style="height: 200px; object-fit: cover;">
                                         <div class="card-body">
-                                            <h5 class="card-title">Inventory UI</h5>
-                                            <p class="card-text text-muted small">Modern inventory system with drag-and-drop functionality, item filtering, and sorting. Responsive design for all screen sizes.</p>
-                                            <a href="#!" class="btn btn-sm btn-primary">View</a>
+                                            <h5 class="card-title">RESTful API System</h5>
+                                            <p class="card-text text-muted small">Scalable backend API with authentication, rate limiting, and comprehensive documentation.</p>
+                                            <button class="btn btn-sm btn-primary view-project-btn" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ" data-title="RESTful API System" data-description="A robust backend API built for scalability and performance. Includes JWT authentication, role-based access control, Redis caching, PostgreSQL database integration, and automated API documentation with Swagger.">View</button>
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <!-- Gallery Item 3 -->
-                                <div class="gallery-item" data-category="misc" style="display: inline-block; width: 350px; vertical-align: top;">
+                                <div class="gallery-item" data-category="fullstack" style="display: inline-block; width: 350px; vertical-align: top;">
                                     <div class="card h-100">
-                                        <img src="assets/img/demo-image-01.jpg" class="card-img-top" alt="Data System" style="height: 200px; object-fit: cover;">
+                                        <img src="assets/img/demo-image-01.jpg" class="card-img-top" alt="E-Commerce Platform" style="height: 200px; object-fit: cover;">
                                         <div class="card-body">
-                                            <h5 class="card-title">DataStore Manager</h5>
-                                            <p class="card-text text-muted small">Robust data persistence system with auto-save, backup handling, and session locking to prevent data loss.</p>
-                                            <a href="#!" class="btn btn-sm btn-primary">View</a>
+                                            <h5 class="card-title">E-Commerce Platform</h5>
+                                            <p class="card-text text-muted small">Complete online store with payment integration, inventory management, and admin dashboard.</p>
+                                            <button class="btn btn-sm btn-primary view-project-btn" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ" data-title="E-Commerce Platform" data-description="Full-stack e-commerce solution featuring: Stripe payment integration, real-time inventory tracking, order management system, customer authentication, admin panel for product management, and responsive cart functionality.">View</button>
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <!-- Gallery Item 4 -->
-                                <div class="gallery-item" data-category="fighting" style="display: inline-block; width: 350px; vertical-align: top;">
+                                <div class="gallery-item" data-category="frontend" style="display: inline-block; width: 350px; vertical-align: top;">
                                     <div class="card h-100">
-                                        <img src="assets/img/demo-image-02.jpg" class="card-img-top" alt="Boss Fight" style="height: 200px; object-fit: cover;">
+                                        <img src="assets/img/demo-image-02.jpg" class="card-img-top" alt="Dashboard" style="height: 200px; object-fit: cover;">
                                         <div class="card-body">
-                                            <h5 class="card-title">Boss AI System</h5>
-                                            <p class="card-text text-muted small">Intelligent boss fight system with multiple phases, special attacks, and adaptive difficulty based on player performance.</p>
-                                            <a href="#!" class="btn btn-sm btn-primary">View</a>
+                                            <h5 class="card-title">Analytics Dashboard</h5>
+                                            <p class="card-text text-muted small">Interactive data visualization dashboard with charts, graphs, and real-time updates.</p>
+                                            <button class="btn btn-sm btn-primary view-project-btn" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ" data-title="Analytics Dashboard" data-description="Data-driven dashboard with interactive visualizations using Chart.js and D3. Features real-time data updates, customizable widgets, export functionality, and responsive design for all devices.">View</button>
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <!-- Gallery Item 5 -->
-                                <div class="gallery-item" data-category="gui" style="display: inline-block; width: 350px; vertical-align: top;">
+                                <div class="gallery-item" data-category="backend" style="display: inline-block; width: 350px; vertical-align: top;">
                                     <div class="card h-100">
-                                        <img src="assets/img/demo-image-01.jpg" class="card-img-top" alt="Shop System" style="height: 200px; object-fit: cover;">
+                                        <img src="assets/img/demo-image-01.jpg" class="card-img-top" alt="Database System" style="height: 200px; object-fit: cover;">
                                         <div class="card-body">
-                                            <h5 class="card-title">Shop Interface</h5>
-                                            <p class="card-text text-muted small">Feature-rich shop UI with category browsing, search functionality, and smooth purchase animations with confirmation dialogs.</p>
-                                            <a href="#!" class="btn btn-sm btn-primary">View</a>
+                                            <h5 class="card-title">Database Architecture</h5>
+                                            <p class="card-text text-muted small">Optimized database design with efficient queries, indexing, and backup systems.</p>
+                                            <button class="btn btn-sm btn-primary view-project-btn" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ" data-title="Database Architecture" data-description="Enterprise-grade database solution with normalized schema design, query optimization, automated backups, replication setup, and monitoring tools for performance tracking.">View</button>
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <!-- Gallery Item 6 -->
-                                <div class="gallery-item" data-category="misc" style="display: inline-block; width: 350px; vertical-align: top;">
+                                <div class="gallery-item" data-category="fullstack" style="display: inline-block; width: 350px; vertical-align: top;">
                                     <div class="card h-100">
-                                        <img src="assets/img/demo-image-02.jpg" class="card-img-top" alt="Quest System" style="height: 200px; object-fit: cover;">
+                                        <img src="assets/img/demo-image-02.jpg" class="card-img-top" alt="Social Platform" style="height: 200px; object-fit: cover;">
                                         <div class="card-body">
-                                            <h5 class="card-title">Quest Framework</h5>
-                                            <p class="card-text text-muted small">Flexible quest system supporting multiple objectives, branching paths, and reward distribution with progress tracking.</p>
-                                            <a href="#!" class="btn btn-sm btn-primary">View</a>
+                                            <h5 class="card-title">Social Media App</h5>
+                                            <p class="card-text text-muted small">Feature-rich social platform with real-time messaging, posts, and user interactions.</p>
+                                            <button class="btn btn-sm btn-primary view-project-btn" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ" data-title="Social Media App" data-description="Complete social networking platform with WebSocket-based real-time chat, post feed with infinite scroll, like and comment systems, user profiles, friend connections, and notification system.">View</button>
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <!-- ✏️ EDIT: Add more gallery items by copying the structure above -->
-                                <!-- Just copy a Gallery Item block, change:
-                                     - data-category (fighting, gui, or misc)
-                                     - src (image path)
-                                     - card-title (project name)
-                                     - card-text (description)
-                                     - href (link to project)
-                                -->
-                                
                             </div>
                         </div>
                     </div>
                 </div>
-                
                 <script>
-                    // Category filter functionality
                     const categoryBtns = document.querySelectorAll('.category-btn');
                     const galleryItems = document.querySelectorAll('.gallery-item');
-                    
                     categoryBtns.forEach(btn => {
                         btn.addEventListener('click', function() {
-                            // Update active button
                             categoryBtns.forEach(b => b.classList.remove('active'));
                             this.classList.add('active');
-                            
                             const category = this.getAttribute('data-category');
-                            
-                            // Filter items
                             galleryItems.forEach(item => {
                                 if (category === 'all' || item.getAttribute('data-category') === category) {
                                     item.style.display = 'inline-block';
@@ -337,12 +242,48 @@
                             });
                         });
                     });
+                    const viewProjectBtns = document.querySelectorAll('.view-project-btn');
+                    viewProjectBtns.forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            const videoUrl = this.getAttribute('data-video');
+                            const title = this.getAttribute('data-title');
+                            const description = this.getAttribute('data-description');
+                            document.getElementById('modalVideoTitle').textContent = title;
+                            document.getElementById('modalVideoFrame').src = videoUrl + '?autoplay=1';
+                            document.getElementById('modalVideoDescription').textContent = description;
+                            document.getElementById('projectModal').style.display = 'flex';
+                            document.body.style.overflow = 'hidden';
+                        });
+                    });
+                    function closeModal() {
+                        document.getElementById('projectModal').style.display = 'none';
+                        document.getElementById('modalVideoFrame').src = '';
+                        document.body.style.overflow = 'auto';
+                    }
+                    document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+                    document.getElementById('projectModal').addEventListener('click', function(e) {
+                        if (e.target === this) {
+                            closeModal();
+                        }
+                    });
                 </script>
-                
+                <div id="projectModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999; align-items: center; justify-content: center; padding: 20px;">
+                    <div style="background: #fff; border-radius: 10px; max-width: 900px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative;">
+                        <button id="closeModalBtn" style="position: absolute; top: 15px; right: 15px; background: #333; color: white; border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 24px; cursor: pointer; z-index: 10; line-height: 1;">&times;</button>
+                        <div style="padding: 30px;">
+                            <h3 id="modalVideoTitle" style="margin-bottom: 20px; color: #333;"></h3>
+                            <div class="ratio ratio-16x9" style="margin-bottom: 20px;">
+                                <iframe id="modalVideoFrame" allowfullscreen allow="autoplay"></iframe>
+                            </div>
+                            <div style="padding: 20px; background: #f8f9fa; border-radius: 5px;">
+                                <h5 style="margin-bottom: 15px; color: #333;">Project Description</h5>
+                                <p id="modalVideoDescription" style="color: #666; line-height: 1.6; margin: 0;"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        
-        <!-- Skills/Services Section (Optional) -->
         <section class="about-section text-center" style="padding: 5rem 0;">
             <div class="container px-4 px-lg-5">
                 <h2 class="text-white mb-5">Expertise</h2>
@@ -371,8 +312,6 @@
                 </div>
             </div>
         </section>
-        
-        <!-- Signup-->
         <section class="signup-section" id="signup">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5">
@@ -380,10 +319,8 @@
                         <i class="fas fa-briefcase fa-2x mb-2 text-white"></i>
                         <h2 class="text-white mb-5">Interested in Hiring or Collaborating?</h2>
                         <p class="text-white-50 mb-4">
-                            If you're looking for a Roblox Scripter or need consultation about your project,<br>
-                            feel free to reach out through the channels below.
+                            If you're looking for a Roblox Scripter or need consultation about your project,<br>feel free to reach out through the channels below.
                         </p>
-                        <!-- Contact form - if you want to use it, sign up for API at SB Forms -->
                         <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
                             <div class="row input-group-newsletter">
                                 <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter your email..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
@@ -402,7 +339,6 @@
                 </div>
             </div>
         </section>
-        <!-- Contact-->
         <section class="contact-section bg-black">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5">
@@ -422,7 +358,6 @@
                                 <i class="fas fa-envelope text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0">Email</h4>
                                 <hr class="my-4 mx-auto" />
-                                <!-- ✏️ EDIT: Add your email -->
                                 <div class="small text-black-50"><a href="mailto:hex@example.com">hex@example.com</a></div>
                             </div>
                         </div>
@@ -433,14 +368,12 @@
                                 <i class="fab fa-discord text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0">Discord</h4>
                                 <hr class="my-4 mx-auto" />
-                                <!-- ✏️ EDIT: Add your Discord username -->
                                 <div class="small text-black-50">hex#0000</div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="social d-flex justify-content-center mt-5">
-                    <!-- ✏️ EDIT: Add your social media links -->
                     <a class="mx-2" href="#!" title="Roblox Profile"><i class="fas fa-gamepad"></i></a>
                     <a class="mx-2" href="#!" title="GitHub"><i class="fab fa-github"></i></a>
                     <a class="mx-2" href="#!" title="Discord"><i class="fab fa-discord"></i></a>
@@ -450,15 +383,12 @@
                 </div>
             </div>
         </section>
-        <!-- Footer-->
         <footer class="footer bg-black small text-center text-white-50">
             <div class="container px-4 px-lg-5">
                 Copyright &copy; Hex (Khunawut Duangwinyan) 2025
             </div>
         </footer>
-        <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
