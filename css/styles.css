@@ -11201,3 +11201,36 @@ body {
 .footer {
   padding: 5rem 0;
 }
+
+.gallery-item .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.gallery-item .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.25rem;
+}
+
+.gallery-item .card-title {
+    white-space: normal;
+    word-wrap: break-word;
+    margin-bottom: 0.75rem;
+    min-height: 2.5em;
+}
+
+.gallery-item .card-text {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: hidden;
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.gallery-item .view-project-btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
